@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise 🎁</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #e6f0ff);
+      font-family: 'Vazir', sans-serif;
+      direction: rtl;
+      text-align: center;
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    #qrcode {
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+  <h1>🎀 اسکن کن تا سورپرایز ببینی 🎉</h1>
+  <div id="qrcode"></div>
+  <p>📱 با دوربین گوشی‌ت این QR کد رو اسکن کن</p>
+
+  <script>
+    // آدرس صفحه‌ی تولد رو اینجا بذار 👇
+    const birthdayPage = "https://1rhy.github.io/Surprise/birthday.html";
+    new QRCode(document.getElementById("qrcode"), {
+      text: birthdayPage,
+      width: 200,
+      height: 200,
+      colorDark: "#d63384",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
